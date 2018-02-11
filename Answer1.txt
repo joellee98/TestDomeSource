@@ -1,0 +1,29 @@
+using System;
+using System.Collections;
+public class Palindrome
+{
+    public static bool IsPalindrome(string word)
+    {
+		int i = 0;
+		int j = word.Length-1;
+		string word2 = word.ToUpper();
+		
+			for(;j >0;j--)
+			{
+				if(word2[i] !=  word2[j])
+				{
+					return false;
+				}
+				i++;
+			}
+		
+		return true;
+		
+		
+    }
+
+    public static void Main(string[] args)
+    {
+        Console.WriteLine(Palindrome.IsPalindrome("Deleveled"));
+    }
+}
